@@ -30,8 +30,38 @@ public class RocketShip {
      of //...\\ on either side.
      */
     public static void printNoseCone() {
-        // your code goes here.
         System.out.println("A nose cone should be here.");
+        int starSize = 2;
+
+        for (int row = 0; row < ROCKET_SIZE; row++){
+            // noticed it needed correct spacing
+            for (int s = 0; s < ROCKET_SIZE - row - 1; s++) {
+                System.out.print(" ");
+            }
+
+            // created these variables to use as an end value that basically increases every loop
+            // and adds another loop to the total it has to do, 
+            // in all making it print another forward slash and back slash.
+            int fowardSlash = row + 1;
+            int backSlash = row + 1;
+
+            // for loop that prints 1 forward slash and should increase every loop.
+            for (int j = 0; j < fowardSlash; j++) {
+                System.out.print("/");
+            } 
+
+            // for loop that prints 2 stars, hard coded.
+            for (int k = 0; k < starSize; k++) {
+                System.out.print("*");
+            }
+
+            // for loop tha prints 1 backslash and has an extra to escape it.
+            for (int l = 0; l < backSlash; l++) {
+                System.out.print("\\");
+            }
+            System.out.println();
+        }   
+        
     }
     
     /**
