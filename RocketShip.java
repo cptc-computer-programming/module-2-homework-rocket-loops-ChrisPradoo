@@ -1,4 +1,11 @@
-// Your header comment goes here.
+/*
+Christian Castaneda Prado
+1/20/2026
+Assignment #2 Rocket Ship with Loops 
+
+This program will print out a rocket pattern,
+and is able to change the size by using a constant.
+*/
 
 public class RocketShip {
     public static final int ROCKET_SIZE = 3;
