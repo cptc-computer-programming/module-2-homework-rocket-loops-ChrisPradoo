@@ -83,9 +83,43 @@ public class RocketShip {
      Print the top half of two diamonds between vertical lines.
      */
     public static void printDiamondTop() {
-        // your code goes here.
         System.out.println("A diamond top should be here.");
-    }
+        
+
+        for (int loop = 1; loop <= ROCKET_SIZE; loop++) {
+            // the vertical line at the left side
+            System.out.print("|");
+
+            // the loop that prints for the dots on the left side of the triangle
+            for (int i = 1; i <= ROCKET_SIZE - loop; i++) {
+                System.out.print(".");
+            }
+
+            // prints left triangle, and increases after each loop
+            for (int j = 1; j <= loop; j++) {
+                System.out.print("/\\");
+            }
+
+            // prints middle dots
+            for (int k = 1; k <= 2 * (ROCKET_SIZE - loop); k++) {
+                System.out.print(".");
+            }
+
+            // prints the right triangle 
+            for (int l = 1; l <= loop; l++) {
+                System.out.print("/\\");
+            }
+            
+            // prints the right dots
+            for (int i = 1; i <= ROCKET_SIZE - loop; i++) {
+                System.out.print(".");
+            }
+
+            // the vertical line at the right side 
+            System.out.println("|");
+        }
+        }   
+    
     
     /**
      Print the bottom half of two diamonds between vertical lines.
